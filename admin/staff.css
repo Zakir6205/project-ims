@@ -1,0 +1,67 @@
+.staff-con {
+    width: 80%;
+    height: calc(100vh - 75px);
+    background-color: rgb(246, 243, 243);
+    position: relative;
+}
+
+.staff-con .course-tittle {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    /* position: relative; */
+}
+
+.staff-con .course-tittle .coursenav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 90px;
+}
+
+
+.staff-con .course-tittle .coursenav .conav {
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 12px;
+    font-weight: 400;
+    color: blue;
+}
+
+.staff-con .search-course {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.staff-con .search-course #search-course {
+    padding: 4px;
+    border: 2px solid black;
+    border-right: none;
+    border-radius: 4px 0px 0px 4px;
+    width: 85%;
+    outline: none;
+}
+
+.staff-con .search-course .secour {
+    background-color: rgb(255, 153, 0);
+    border: 2px solid black;
+    border-left: none;
+    border-radius: 0px 4px 4px 0px;
+    padding: 4px 8px;
+    display: flex;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.staff-con .staff-det-con2 #totalcourse {
+    display: block;
+    position: absolute;
+    top: 65px;
+    left: 42%;
+    font-weight: 450;
+    color: blue;
+}

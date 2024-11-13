@@ -1,0 +1,938 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+main {
+    display: flex;
+}
+
+/* nav css */
+
+.admin-nav {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    background-color: #2b415e;
+}
+
+.admin-nav .nav-left {
+    width: 77%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: white;
+    margin-left: 20px;
+}
+
+.admin-nav .nav-left img {
+    height: 32px;
+}
+
+.admin-nav .nav-left img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.admin-nav nav {
+    height: 40px;
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+}
+
+.links-container .dis-non {
+    display: none;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+nav a p {
+    display: none;
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+    display: none;
+}
+
+.sidenav2{
+    display: none;
+}
+
+
+/* admin dashboard css */
+
+.admin-con {
+    width: 80%;
+    height: calc(100vh - 75px);
+    padding: 0px 10px;
+    position: relative;
+    overflow: auto;
+}
+
+.admin-con .admin-box {
+    position: relative;
+    width: 100%;
+    height: calc(100% -10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 22px;
+}
+
+.admin-con::-webkit-scrollbar {
+    width: 4px;
+}
+
+.admin-con::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+    margin: 14px 0px;
+}
+
+.admin-con::-webkit-scrollbar-thumb {
+    background: #848f83;
+    border-radius: 25px;
+}
+
+.admin-con .ad-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 30px;
+    margin-top: 5px;
+    padding: 0px 20px;
+}
+
+.admin-con .ad-box .box {
+    min-height: 130px;
+    box-shadow: 0px 5px 15px 1px gray;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.admin-con .ad-box .box:hover {
+    border: 3px solid rgb(59, 57, 57);
+}
+
+.admin-box .ad-box .box p {
+    text-align: center;
+    color: white;
+    margin-bottom: 3px;
+    font-size: 20px;
+    font-weight: 650;
+}
+
+.admin-con .ad-box .box .since {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.admin-con .ad-box .box1 {
+    background-color: #677AFB;
+}
+
+.admin-con .ad-box .box2 {
+    background-color: #FFAA11;
+}
+
+.admin-con .ad-box .box3 {
+    background-color: #6846BE;
+}
+
+.admin-con .ad-box .box4 {
+    background-color: #FF2C17;
+}
+
+/* admindashboard chart css */
+
+.graph-box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    min-height: 350px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.graph-box .box {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+/* staff registration css */
+
+.right-con {
+    width: 80%;
+    background-color: rgb(248, 248, 248);
+    padding: 8px 0px;
+}
+
+.right-con .message-succ {
+    width: 100%;
+    text-align: center;
+    color: green;
+    font-weight: 450;
+    font-size: 20px;
+}
+
+.right-con form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.registration-form {
+    background-color: white;
+    height: calc(100vh - 95px);
+    width: 70%;
+    padding: 25px;
+    box-shadow: 0px 0px 12px 1px gray;
+    border-radius: 7px;
+    margin-top: 3px;
+    padding-bottom: 10px;
+    overflow: auto;
+}
+
+.registration-form::-webkit-scrollbar {
+    width: 4px;
+}
+
+.registration-form::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+    margin: 14px 0px;
+}
+
+.registration-form::-webkit-scrollbar-thumb {
+    background: #848f83;
+    border-radius: 25px;
+}
+
+.registration-form .tsr {
+    text-align: center;
+    font-weight: 500;
+}
+
+.registration-form .input-tittle {
+    font-weight: 450;
+    font-size: 14px;
+}
+
+.registration-form .ibt {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.registration-form .input-box {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.registration-form .input-box .input {
+    display: flex;
+    flex-direction: column;
+    width: calc(100%/3);
+    margin-left: 10px;
+}
+
+.registration-form .input-box .rel {
+    width: calc(100%/2);
+}
+
+.registration-form .input-box .iptd {
+    width: calc(100% / 2);
+}
+
+.registration-form .input-box .iptd #st-image {
+    border: none;
+}
+
+
+.registration-form .input-box .tinput {
+    width: 100%;
+}
+
+.registration-form .input-box .input input,
+select {
+    padding: 4.5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 98%;
+    outline: none;
+}
+
+.registration-form .input-box .input label {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 3px;
+}
+
+.registration-form .input-box .input span {
+    font-size: 13px;
+    font-weight: 400;
+    color: red;
+}
+
+.registration-form .input-box .rel .maint {
+    position: relative;
+}
+
+.registration-form .input-box .rel #eye1,
+#eye2 {
+    position: absolute;
+    right: 12px;
+    bottom: 5px;
+    display: none;
+
+}
+
+.registration-form .input-box .rel #offeye1,
+#offeye2 {
+    position: absolute;
+    right: 12px;
+    bottom: 5px;
+}
+
+.registration-form .submit-btn {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.registration-form .submit-btn input {
+    padding: 5px 15px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(73, 158, 191);
+    border: none;
+    border-radius: 15px;
+}
+
+/* staff details css */
+
+.sdContainer {
+    width: 80%;
+    height: calc(100vh - 75px);
+    background-color: rgb(246, 243, 243);
+}
+
+.sdContainer .sd-tittle {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.sdContainer .staff-table {
+    height: 80%;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.sdContainer .table-data {
+    height: 88%;
+    text-align: center;
+    width: 88%;
+    overflow: auto;
+    box-shadow: 0px 0px 12px 1px gray;
+}
+
+.sdContainer .table-data::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sdContainer .table-data::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+}
+
+.sdContainer .table-data::-webkit-scrollbar-thumb {
+    background: #8f8383;
+}
+
+
+.sdContainer .table-data table {
+    width: 100%;
+    background-color: #fff;
+}
+
+.sdContainer .table-data table thead tr th {
+    font-weight: 300;
+    position: sticky;
+    top: 0;
+}
+
+.sdContainer .table-data table tr:hover {
+    background-color: #d3f7e9;
+}
+
+
+.sdContainer .table-data table th,
+td {
+    border-collapse: collapse;
+    border: 1px solid white;
+    text-align: center;
+    padding: 10px;
+}
+
+.sdContainer .table-data table th {
+    background-color: rgb(1, 132, 88);
+    color: white;
+}
+
+.sdContainer .table-data table td .more {
+    text-decoration: none;
+    color: blue;
+}
+
+.sdContainer .table-data table td .more:hover {
+    border: 2px solid blue;
+    padding: 2px 10px;
+    border-radius: 25px;
+}
+
+.sdContainer .table-data table,
+th,
+td {
+    border-collapse: collapse;
+}
+
+.sdContainer .table-data table tbody:nth-child(odd) {
+    background-color: rgb(234, 234, 242);
+}
+
+/* staff full details css */
+.stdc-main {
+    background-color: #f6f2f2;
+    display: flex;
+
+}
+
+.prob {
+    height: 100%;
+    width: 80%;
+    padding: 25px;
+    padding-bottom: 0px;
+}
+
+.stdc {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 12px 1px gray;
+    background-color: #fff;
+}
+
+.stdc .up-st {
+    width: 100%;
+    height: 120px;
+    background-color: #3e5e25;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding-left: 190px;
+}
+
+.stdc .up-st h2 {
+    display: flex;
+    align-items: center;
+}
+
+.stdc .up-st h2 span {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.stdc .down-st {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    align-items: center;
+    padding-left: 150px;
+    font-weight: 400;
+}
+
+.stdc .down-st p {
+    box-shadow: 0px 0px 12px 1px gray;
+    padding: 5px 25px;
+    border-radius: 15px;
+    margin: 0px 40px;
+}
+
+.stdc .up-st h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.stdc .up-st #sp {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.stdc .up-st #sw {
+    font-size: 14px;
+}
+
+.stdc .bet-st {
+    margin-left: 170px;
+}
+
+.stdc .bet-st .tablee {
+    display: flex;
+    justify-content: center;
+}
+
+.stdc .bet-st .table {
+    margin-right: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0px 0px 12px 1px gray;
+    border-radius: 15px;
+    padding-bottom: 10px;
+}
+
+.stdc .bet-st .table1 {
+    margin-left: 25px;
+}
+
+.stdc .bet-st .table tr th {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.stdc .bet-st .table tr td {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0px 10px;
+    border: none;
+}
+
+.stdc .bet-st .table tr td p {
+    display: inline;
+    font-size: 18px;
+    font-weight: 350;
+}
+
+.stdc .bet-st .table tr .sdtc-td {
+    text-align: start;
+}
+
+.stdc .left-st {
+    width: 150px;
+    height: 100%;
+    background-color: #244e5b;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stdc .left-st .img-con {
+    height: 130px;
+    width: 130px;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-top: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stdc .left-st .img-con img {
+    width: 128px;
+    height: 128px;
+}
+
+.stdc-btn {
+    margin-left: 170px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.stdc-btn a {
+    text-decoration: none;
+}
+
+.stdc-btn #edit {
+    background-color: green;
+    padding: 5px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.stdc-btn #remove1,
+#remove2 {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 5px 20px;
+    height: 37px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 12px 1px gray;
+}
+
+.stdc-btn #remove2 {
+    display: none;
+    color: white;
+    background-color: red;
+}
+
+/* success page css */
+
+.success {
+    height: calc(100vh - 75px);
+    width: 80%;
+    background-color: rgb(246, 243, 243);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.success .message {
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px 1px gray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    margin: 60px 0px;
+}
+
+.success .message .succ {
+    font-size: 27px;
+    font-weight: 400;
+    color: green;
+    margin-top: 20px;
+}
+
+.success .ben #btn1 {
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+    font-weight: 450;
+    margin-right: 25px;
+}
+
+@media screen and (max-width:850px) {
+    /* chart css */
+
+    .graph-box {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 10px 0px;
+        gap: 10px;
+    }
+
+    .graph-box .box {
+        height: 300px;
+    }
+
+    /* nav-css */
+
+    .admin-nav {
+        height: 50px;
+    }
+
+    .admin-nav nav {
+        width: 15%;
+    }
+
+    .admin-nav .nav-left {
+        width: 85%;
+        justify-content: flex-start;
+        height: 50px;
+        font-size: 10px;
+    }
+
+    .links-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 250px;
+
+        border-left: 1px solid gray;
+        background-color: #232F3F;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.75s ease-out;
+    }
+
+    .links-container .dis-non {
+        display: block;
+    }
+
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 10px 30px;
+        justify-content: flex-start;
+        color: white;
+        font-weight: 600;
+    }
+
+    nav a p {
+        display: block;
+    }
+
+    .open-sidebar-button,
+    .close-sidebar-button {
+        display: block;
+        padding: 20px;
+        height: 50px;
+    }
+
+    #sidebar-active:checked~.links-container {
+        right: 0;
+
+    }
+
+    #sidebar-active:checked~#overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+    .sidenav2{
+        display: block;
+    }
+
+
+    /* admin-menu css */
+
+    .admin-menu {
+        display: none;
+    }
+
+    .right-con {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .right-con form {
+        margin-top: 20px;
+    }
+
+    /* dashboard css */
+
+    .admin-con {
+        width: 100%;
+        height: 100%;
+    }
+
+    .admin-con .ad-box {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .registration-form {
+        width: 90%;
+        height: 100%;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        padding: 14px;
+    }
+
+    .registration-form .input-box {
+        flex-direction: column;
+    }
+
+    .registration-form .input-box .input {
+        width: 95%;
+        margin-top: 8px;
+    }
+
+    .registration-form .input-box .input input,
+    select {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 7px;
+    }
+
+    .registration-form .input-box .rel #eye1,
+    #eye2 {
+        right: 10px;
+        bottom: 12px;
+    }
+
+    .registration-form .input-box .rel #offeye1,
+    #offeye2 {
+        right: 10px;
+        bottom: 12px;
+    }
+
+    .sdContainer {
+        width: 100%;
+    }
+
+    .sdContainer .staff-table {
+        height: calc(100vh - 230px);
+        font-size: 10px;
+    }
+
+    .sdContainer .navbar {
+        justify-content: center;
+    }
+
+    .sdContainer .table-data table tr .dis-non {
+        display: none;
+    }
+
+    .sdContainer .navbar ul li a {
+        font-weight: 600;
+        font-size: 12px;
+        color: white;
+    }
+
+    /* staff-details css */
+
+    .stdc {
+        width: 100%;
+    }
+
+    .stdc .tablee {
+        flex-direction: column;
+    }
+
+    .stdc .tablee .table2 {
+        margin-left: 25px;
+    }
+
+    .stdc .down-st {
+        margin-top: 30px;
+    }
+
+    .stdc-btn {
+        width: 100%;
+        margin: 35px 0px;
+    }
+
+}
+
+@media screen and (max-width:530px) {
+    .admin-con .ad-box {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    /* staff-details css */
+
+    .stdc .up-st {
+        height: 90px;
+    }
+
+    .stdc .bet-st {
+        margin-left: 110px;
+    }
+
+    .stdc .left-st {
+        width: 90px;
+    }
+
+    .stdc .left-st .img-con {
+        height: 80px;
+        width: 80px;
+        margin-top: 25px;
+    }
+
+    .stdc .up-st {
+        padding-left: 130px;
+    }
+
+    .stdc .down-st {
+        padding-left: 130px;
+    }
+
+    .stdc .down-st p {
+        margin-left: 0px;
+    }
+
+
+
+    .stdc .up-st h2 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .stdc .up-st #sp {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .stdc .up-st #sw {
+        font-size: 12px;
+    }
+}
